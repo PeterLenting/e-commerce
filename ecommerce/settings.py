@@ -25,7 +25,8 @@ SECRET_KEY = '#p*04a5^#1#7zmykzkim%l$*^m(b480v64x#a9tlesg)*pxo&_'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8080-bee35bc7-f675-406a-aeae-4c1ef74a6a85.ws-eu01.gitpod.io']
+ALLOWED_HOSTS = ['8080-bee35bc7-f675-406a-aeae-4c1ef74a6a85.ws-eu01.gitpod.io',
+                 'localhost']
 
 
 # Application definition
@@ -130,6 +131,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, "static"),
+)
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
